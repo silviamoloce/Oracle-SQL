@@ -1,0 +1,22 @@
+CREATE VIEW CakeWithBakerInfo AS
+SELECT Cakes.Id AS CakeId, Cakes.Name AS CakeName, Bakers.Id AS BakerId, Bakers.Name AS BakerName
+FROM Cakes
+JOIN Bakers ON Cakes.OwnerBakerId = Bakers.Id;
+
+
+
+CREATE VIEW CakeWithIngredients AS
+SELECT Cakes.Id AS CakeId, Cakes.Name AS CakeName, Ingredients.Id AS IngredientId, Ingredients.Name AS IngredientName
+FROM Cakes
+JOIN CakeIngredients ON Cakes.Id = CakeIngredients.CakeId
+JOIN Ingredients ON CakeIngredients.IngredientId = Ingredients.Id
+
+
+CREATE VIEW BakerSpecialties AS
+SELECT Bakers.Id AS BakerId, Bakers.Name AS BakerName, Cakes.Id AS CakeId, Cakes.Name AS CakeName
+FROM Bakers
+LEFT JOIN Cakes ON Bakers.Id = Cakes.OwnerBakerId;
+
+
+
+SELECT * FROM CakeWithIngredients;

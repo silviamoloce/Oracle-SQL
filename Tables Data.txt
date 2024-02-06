@@ -1,0 +1,15 @@
+INSERT INTO Bakers (Id, Name) VALUES (1, 'Dorel');
+INSERT INTO Bakers (Id, Name) VALUES (2, 'Ana');
+
+INSERT INTO Ingredients (Id, Name) VALUES (1, 'Flour');
+INSERT INTO Ingredients (Id, Name) VALUES (2, 'Sugar');
+INSERT INTO Ingredients (Id, Name) VALUES (3, 'Eggs');
+
+INSERT INTO Cakes (Id, Name, OwnerBakerId) VALUES (1, 'Chocolate Cake', 1);
+INSERT INTO Cakes (Id, Name, OwnerBakerId) VALUES (2, 'Vanilla Cake', 2);
+
+INSERT INTO CakeIngredients (CakeId, IngredientId) VALUES (1, 1); 
+INSERT INTO CakeIngredients (CakeId, IngredientId) VALUES (1, 2);
+INSERT INTO CakeIngredients (CakeId, IngredientId) VALUES (2, 1); 
+INSERT INTO CakeIngredients (CakeId, IngredientId) VALUES (2, 3); 
+
