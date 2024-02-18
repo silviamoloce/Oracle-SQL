@@ -13,3 +13,10 @@ INSERT INTO CakeIngredients (CakeId, IngredientId) VALUES (1, 2);
 INSERT INTO CakeIngredients (CakeId, IngredientId) VALUES (2, 1); 
 INSERT INTO CakeIngredients (CakeId, IngredientId) VALUES (2, 3); 
 
+
+delete from Bakers where Id = 1
+update Cakes set Name = 'CakeNameNew' where Id = 2
+
+select * from Cakes
+select Name from Cakes where Id = 1
+select OwnerBakerId from Cakes
